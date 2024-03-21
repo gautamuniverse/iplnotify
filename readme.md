@@ -24,7 +24,7 @@ IPL Notify is a Node.js, Express.js, MongoDB, and Socket.io project designed to 
 
 [IPL Notify](https://iplnotify.onrender.com)
 
-## Admin Test Credentials
+## Admin Test Credentials (For Live Website)
 - email: gautam@gmail.com
 - password: password
 
