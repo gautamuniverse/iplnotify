@@ -20,6 +20,10 @@ IPL Notify is a Node.js, Express.js, MongoDB, and Socket.io project designed to 
 3. Make sure to add your MongoDB Url in the .env file present in the root directory.
 3. Start the server by running either `nodemon index.js` or `node index.js`.
 
+## Admin Test Credentials
+- email: gautam@gmail.com
+- password: password
+
 ## Features
 
 ### User Management
