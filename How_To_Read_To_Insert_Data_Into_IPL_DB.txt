@@ -1,0 +1,257 @@
+You can utilize the provided data to push it via Postman to the MongoDB database.
+
+Follow the steps below in Postman:
+
+Sign Up/Sign In:
+
+For signing up: Send a POST request to http://localhost:3002/user/signup with the following JSON format:
+
+{
+  "name": "YOUR_NAME",
+  "email": "YOUR_EMAIL",
+  "password": "YOUR_PASSWORD",
+  "subscriptions": ["MENTION_THE_TEAM_NAMES"], 
+  "role": "MENTION_THE_ROLE" 
+}
+Note: You can find the team names from the below data. The role can be "user" or "admin" (optional field). You can also sign up from the webpage and change your role directly to admin in the database.
+
+For signing in: Send a POST request to http://localhost:3002/user/signin with the following JSON format:
+
+{
+  "email": "YOUR_EMAIL",
+  "password": "YOUR_PASSWORD"
+}
+
+
+Push Data to Database:
+
+If you have an admin role after signing in, you can push the belo provided data to the database.
+Use the URL: http://localhost:3002/ipl/add
+Make a POST request with the below data inserted into the body of the Postman request. Ensure that "raw" -> "JSON" is selected.
+
+{
+    "data": [
+  {
+    "name": "Mumbai Indians",
+    "details": {
+      "captain": "Rohit Sharma",
+      "coach": "Mahela Jayawardene",
+      "home_ground": "Wankhede Stadium, Mumbai",
+      "owner": "Reliance Industries",
+      "team_logo": "mumbai_indians_logo.png"
+    },
+    "players": [
+      {
+        "name": "Rohit Sharma",
+        "role": "Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Jasprit Bumrah",
+        "role": "Bowler",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Hardik Pandya",
+        "role": "All-Rounder",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Kieron Pollard",
+        "role": "All-Rounder",
+        "nationality": "West Indian"
+      },
+      {
+        "name": "Quinton de Kock",
+        "role": "Wicketkeeper/Batsman",
+        "nationality": "South African"
+      }
+    ]
+  },
+  {
+    "name": "Chennai Super Kings",
+    "details": {
+      "captain": "MS Dhoni",
+      "coach": "Stephen Fleming",
+      "home_ground": "M. A. Chidambaram Stadium, Chennai",
+      "owner": "India Cements",
+      "team_logo": "chennai_super_kings_logo.png"
+    },
+    "players": [
+      {
+        "name": "MS Dhoni",
+        "role": "Wicketkeeper/Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Suresh Raina",
+        "role": "Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "role": "All-Rounder",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Faf du Plessis",
+        "role": "Batsman",
+        "nationality": "South African"
+      },
+      {
+        "name": "Sam Curran",
+        "role": "All-Rounder",
+        "nationality": "English"
+      }
+    ]
+  },
+  {
+    "name": "Royal Challengers Bangalore",
+    "details": {
+      "captain": "Virat Kohli",
+      "coach": "Simon Katich",
+      "home_ground": "M. Chinnaswamy Stadium, Bangalore",
+      "owner": "United Spirits",
+      "team_logo": "rcb_logo.png"
+    },
+    "players": [
+      {
+        "name": "Virat Kohli",
+        "role": "Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "AB de Villiers",
+        "role": "Batsman/Wicketkeeper",
+        "nationality": "South African"
+      },
+      {
+        "name": "Glenn Maxwell",
+        "role": "All-Rounder",
+        "nationality": "Australian"
+      },
+      {
+        "name": "Yuzvendra Chahal",
+        "role": "Bowler",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Kyle Jamieson",
+        "role": "Bowler",
+        "nationality": "New Zealander"
+      }
+    ]
+  },
+  {
+    "name": "Kolkata Knight Riders",
+    "details": {
+      "captain": "Eoin Morgan",
+      "coach": "Brendon McCullum",
+      "home_ground": "Eden Gardens, Kolkata",
+      "owner": "Red Chillies Entertainment",
+      "team_logo": "kkr_logo.png"
+    },
+    "players": [
+      {
+        "name": "Eoin Morgan",
+        "role": "Batsman",
+        "nationality": "English"
+      },
+      {
+        "name": "Shubman Gill",
+        "role": "Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Sunil Narine",
+        "role": "All-Rounder",
+        "nationality": "West Indian"
+      },
+      {
+        "name": "Pat Cummins",
+        "role": "Bowler",
+        "nationality": "Australian"
+      },
+      {
+        "name": "Andre Russell",
+        "role": "All-Rounder",
+        "nationality": "West Indian"
+      }
+    ]
+  },
+  {
+    "name": "Delhi Capitals",
+    "details": {
+      "captain": "Rishabh Pant",
+      "coach": "Ricky Ponting",
+      "home_ground": "Arun Jaitley Stadium, Delhi",
+      "owner": "GMR Group, JSW Group",
+      "team_logo": "delhi_capitals_logo.png"
+    },
+    "players": [
+      {
+        "name": "Rishabh Pant",
+        "role": "Wicketkeeper/Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Shikhar Dhawan",
+        "role": "Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Kagiso Rabada",
+        "role": "Bowler",
+        "nationality": "South African"
+      },
+      {
+        "name": "Prithvi Shaw",
+        "role": "Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Marcus Stoinis",
+        "role": "All-Rounder",
+        "nationality": "Australian"
+      }
+    ]
+  },
+  {
+    "name": "Rajasthan Royals",
+    "details": {
+      "captain": "Sanju Samson",
+      "coach": "Kumar Sangakkara",
+      "home_ground": "Sawai Mansingh Stadium, Jaipur",
+      "owner": "Manoj Badale",
+      "team_logo": "rajasthan_royals_logo.png"
+    },
+    "players": [
+      {
+        "name": "Sanju Samson",
+        "role": "Wicketkeeper/Batsman",
+        "nationality": "Indian"
+      },
+      {
+        "name": "Ben Stokes",
+        "role": "All-Rounder",
+        "nationality": "English"
+      },
+      {
+        "name": "Jos Buttler",
+        "role": "Batsman/Wicketkeeper",
+        "nationality": "English"
+      },
+      {
+        "name": "Chris Morris",
+        "role": "All-Rounder",
+        "nationality": "South African"
+      },
+      {
+        "name": "Rahul Tewatia",
+        "role": "All-Rounder",
+        "nationality": "Indian"
+      }
+    ]
+  }
+]
+}
